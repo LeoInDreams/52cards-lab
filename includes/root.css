@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* ========== import ========== */
+
+/* フォント  */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap");
+
+/* ========== 全体設定 ========== */
+
+:root {
+  font-size: clamp(10px, 3vw, 20px); /* 1remを決定*/
+}
+
+body,
+body * {
+  /* 要素表示 */
+  position: relative; /* 相対位置 */
+  padding: 0; /* 余白なし */
+  margin: 0; /* 余白なし */
+  display: flex; /* flexbox設定 */
+  flex-direction: column; /* 縦並び */
+  justify-content: flex-start; /* 縦：上寄せ */
+  align-items: center; /* 横：中央寄せ */
+  flex-wrap: nowrap; /* 折り返しなし */
+
+  /* 線・フォント */
+  font-size: 1rem;
+  font-family: "Noto Sans JP", sans-serif; /* フォント種類 */
+  font-weight: normal;
+  border-width: 2px; /* 線の幅 */
+}
+
+body::-webkit-scrollbar,
+body *::-webkit-scrollbar {
+  display: none; /*スクロールバー非表示（Chrome・Safari）*/
+}
+
+/* ========== 要素設定 ========== */
+
+body {
+  width: 100%; /* 幅最大 */
+  min-height: 100vh; /* 高さ最大 */
+  user-select: none; /* 選択禁止 */
+}
+
+main {
+  /* メイン */
+  width: 100%; /* 幅 */
+  flex-grow: 1;
+  align-items: stretch; /* 横：幅いっぱい */
+}
+
+a {
+  /* リンク */
+  text-decoration: none; /* 装飾排除 */
+}
+
+button {
+  /* ボタン */
+  align-self: center; /* 横：中央寄せ */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5rem; /* 角丸 */
+}
+button:hover {
+  /* ボタンホバー時 */
+  opacity: 0.8;
+}
+
+address {
+  /* アドレス */
+  font-style: normal; /* 装飾排除 */
+}
+
+hr {
+  /* 水平線 */
+  width: 100%;
+  margin: 0.5rem 0;
+  border: 1px solid;
+}
+
+ul {
+  flex-direction: column;
+}
+ul li {
+  display: list-item;
+  margin-left: 0.5rem;
+  list-style-position: inside;
+}
+ul li::marker {
+  content: "・";
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 2rem; /* フォントサイズ */
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.5rem; /* フォントサイズ */
+  font-weight: normal;
+}
+
+/* ========== アニメーション ========== */
+
+main,
+main * {
+  /* トランジション */
+  transition: 200ms ease;
+}
+
+/* ========== EOF ========== */

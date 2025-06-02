@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/* ========== import ========== */
+/* CSS */
+@import url("./root.css");
+
+/* ========== 色 ========== */
+:root {
+  --color-font2: #101818;
+  --color-font: #202f2f;
+  --color-line: #405e5e;
+  --color-line2: #80bcbd;
+  --color-sect: #aad9bb;
+  --color-sect2: #d5f0c1;
+  --color-bg2: #e7f3c5;
+  --color-bg: #f9f7c9;
+  background-color: transparent; /* 背景透明 */
+}
+
+body * {
+  color: var(--color-font); /* フォント色 */
+  border-color: var(--color-line); /* 線の色 */
+}
+
+header {
+  background-color: var(--color-sect);
+}
+
+footer {
+  background-color: var(--color-sect2);
+}
+
+main {
+  background-color: var(--color-bg);
+}
+
+button {
+  background-color: var(--color-sect);
+}
+
+/* ========== EOF ========== */
